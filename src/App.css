@@ -1,38 +1,230 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  padding: 20px 0;
+}
+
+/* GreetShare Component Styles */
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.greeting-container {
+  margin-bottom: 20px;
+}
+
+.greeting-text {
+  font-size: 2.5rem;
+  color: #1e3a8a;
+  margin: 0;
+}
+
+.sub-text {
+  font-size: 1.5rem;
+  color: #d946ef;
+  margin: 0;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.input-field {
+  flex: 1;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.upload-button {
+  background-color: transparent;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  color: #6b7280;
+}
+
+/* SearchBar Component Styles */
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 0 10px;
+  margin-top: 30px; /* Adds spacing below GreetShare */
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 10px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+.search-input::placeholder {
+  color: #9ca3af;
+  font-size: 1rem;
+}
+
+.search-icon {
+  width: 24px;
+  height: 24px;
+  color: #7c3aed;
+  margin-right: 10px;
+}
+
+.search-button {
+  background: linear-gradient(135deg, #7c3aed, #d946ef);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.arrow-icon {
+  width: 24px;
+  height: 24px;
+  color: #fff;
+}
+
+/* PostCard Component Styles */
+.post-card {
+  background-color: white;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  padding: 20px;
+}
+
+.privacy-toggle {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.privacy-button {
+  border: none;
+  background-color: #e5e7eb;
+  color: #6b7280;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.privacy-button.active {
+  background: linear-gradient(135deg, #7c3aed, #d946ef);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.post-info {
+  flex-grow: 1;
+}
+
+.user-name {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #111827;
+}
+
+.post-date {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.post-text {
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 15px;
+}
+
+.post-image {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-actions {
+  display: flex;
+  align-items: center;
+}
+
+.post-actions button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 15px;
+  color: #6b7280;
+  transition: color 0.3s ease;
+}
+
+.like-button.liked {
+  color: #d946ef;
+}
+
+.post-actions button:hover {
+  color: #7c3aed;
 }
